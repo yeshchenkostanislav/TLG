@@ -1,0 +1,197 @@
+.portfolio {
+  padding: 70px 0 140px 0;
+  background: #fff url(img/portfolio-bg2.png)no-repeat center;
+  $root: &;
+
+  &__title {
+    color: $section-title;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 33px;
+      height: 115px;
+      right: 11px;
+      top: -62px;
+      border-left: 12px solid rgba(#e7d5bb, 0.5);
+      border-top: 12px solid rgba(#e7d5bb, 0.5);
+      z-index: -1;
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      content: '';
+      background: url(img/leaf-green-small.png)no-repeat center/cover;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      left: -20px;
+      top: -20px;
+      width: 24px;
+      height: 41px;
+    }
+  }
+
+  &__list {
+    margin: 65px 0 0 0;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &:not(:first-child) {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &_one {
+      &:after {
+        content: '';
+        display: block;
+        background: url(img/leaf-green.png)no-repeat center;
+        width: 57px;
+        height: 31px;
+        top: -13px;
+        right: -23px;
+        position: absolute;
+        z-index: 15;
+      }
+    }
+
+    &_two {
+      &:after {
+        content: '';
+        display: block;
+        background: url(img/leaf-green.png)no-repeat center;
+        width: 57px;
+        height: 31px;
+        top: -13px;
+        left: -20px;
+        position: absolute;
+        z-index: 15;
+      }
+    }
+
+    &_three {
+      &:after {
+        content: '';
+        display: block;
+        background: url(img/leaf-green.png)no-repeat center;
+        width: 57px;
+        height: 31px;
+        bottom: -13px;
+        left: -20px;
+        position: absolute;
+        z-index: 15;
+      }
+    }
+
+    &_four {
+      &:after {
+        content: '';
+        display: block;
+        background: url(img/leaf-green.png)no-repeat center;
+        width: 57px;
+        height: 31px;
+        top: -13px;
+        right: -20px;
+        position: absolute;
+        z-index: 15;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .icon-search {
+        opacity: 1;
+      }
+
+      #{$root} {
+        &__list-item-sumtitle {
+          height: auto;
+          overflow: auto;
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 25px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  &__list-item-title {
+    color: #ffffff;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(#ffffff, .5);
+    }
+  }
+
+  &__list-item-sumtitle {
+    color: #e7d5bb;
+    margin: 5px 0 0 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: $t-time;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(#ffffff, .5);
+    }
+  }
+
+  &__search-svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: $t-time;
+  }
+
+  &__img {
+    &_active {
+      filter: blur(3px);
+    }
+  }
+}

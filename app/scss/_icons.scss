@@ -1,0 +1,42 @@
+.icon {
+  display: inline-block;
+
+  //app/elements/common-elements/header/icons
+  &.logo {
+    background: url(img/icons/logo.png)no-repeat center/cover;
+    width: 92px;
+    height: 69px;
+  }
+
+  &-phone {
+    width: 13px;
+    height: 13px;
+    fill: #5f383c;
+  }
+
+  &-arrow {
+    width: 10px;
+    height: 11px;
+    fill: #fff;
+  }
+
+  //app/elements/common-elements/footer/svg-icons
+  &-location {
+    width: 15px;
+    height: 9px;
+    fill: #fff;
+  }
+
+  &-envelope {
+    width: 10px;
+    height: 9px;
+    fill: #fff;
+  }
+
+  //app/elements/portfolio/svg-icons
+  &-search {
+    width: 25px;
+    height: 26px;
+    fill: #fff;
+  }
+}

@@ -1,0 +1,23 @@
+.contact.section
+  ._wrap.wrap
+    ._title KONTAKT
+    ._content
+      ._info
+        ._list
+          ._list-item 
+            +svg('location', 'contact__icon contact__location-svg')
+            | Tischlerei Lambrecht GmbH, Ruhlsdorfer Str. 95, <br class="contact__br"> Gebäude 99, 14532 Stahnsdorf
+          ._list-item
+            +svg('phone', 'contact__icon contact__phone-svg')
+            a(href="tel:+49033181324077", title="title")._link.-phone  +49 (0) 3318 132 40 77
+          ._list-item
+            +svg('envelope', 'contact__icon contact__envelope-svg')
+            a(href="mail:tischlerei.lambrecht@gmail.com", title="title")._link tischlerei.lambrecht@gmail.com
+        form._form
+          ._form-title KONTAKTIEREN SIE UNS
+          input(type="text" placeholder="Enter your name here..")._input
+          input(type="text" placeholder="Enter your e-mail here..")._input
+          input(type="text" placeholder="Enter your nachricht here..")._input
+          button(type='submit').btn._btn Send
+            +svg('arrow')
+      ._map

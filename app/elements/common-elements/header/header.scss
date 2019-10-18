@@ -1,0 +1,240 @@
+.header {
+  padding: 30px 0;
+  $root: &;
+
+  @media(max-width: 1200px) {
+    padding: 30px 15px;
+  }
+
+  @media(max-width: 576px) {
+    padding: 20px 0;
+  }
+
+  &__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__contacts {
+    @media(max-width: 576px) {
+      margin: 20px 0 0 0;
+    }
+
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+
+    @media(max-width: 576px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 70px;
+    max-width: 465px;
+    width: 100%;
+    z-index: 50;
+
+    @media(max-width: 992px) {
+      display: none;
+
+      &_active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        max-width: 100px;
+        margin: 0;
+        top: 20px;
+        left: 165px;
+      }
+    }
+
+    @media(max-width: 576px) {
+      &_active {
+        padding: 15px;
+        background: #fff;
+        max-width: 140px;
+        left: auto;
+        right: 30px;
+      }
+    }
+  }
+
+  &__nav-item {
+    font-size: 14px;
+    line-height: 30px;
+    color: #3f3f3f;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
+    &:first-child {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(img/cube.png)no-repeat center/cover;
+        width: 30px;
+        height: 30px;
+        left: -21px;
+        top: -10px;
+        z-index: -1;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: #85c146;
+      margin: 0 auto 0 auto;
+      opacity: 0;
+      transition-duration: $t-time;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &:after {
+        opacity: 1;
+        width: 26px;
+      }
+    }
+
+    &_active {
+      &:after {
+        content: '';
+        display: block;
+        width: 26px;
+        height: 1px;
+        background-color: #85c146;
+        margin: 0 auto 0 auto;
+        transition-duration: $t-time;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__mail {
+    color: $item-title;
+    font-size: 16px;
+  }
+
+  &__tel-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0 0 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(img/cube.png)no-repeat center/cover;
+      width: 30px;
+      height: 30px;
+      right: -12px;
+      bottom: -10px;
+      z-index: -1;
+
+      @media(max-width: 576px) {
+        right: 0;
+      }
+    }
+  }
+
+  &__tel {
+    color: $item-title;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 0 7px;
+  }
+
+  &__menu-btn {
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    background: $btn-color;
+    position: relative;
+    display: block;
+    margin: 0 0 0 25px;
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media(max-width: 992px) {
+      display: block;
+    }
+
+
+    &:after {
+      content: '';
+      width: 18px;
+      height: 3px;
+      left: 0;
+      border-radius: 5px;
+      background: $btn-color;
+      position: absolute;
+      top: -10px;
+      transition: $t-time;
+    }
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 3px;
+      left: 0;
+      border-radius: 5px;
+      background: $btn-color;
+      position: absolute;
+      bottom: -10px;
+      transition: $t-time;
+    }
+
+    &_active {
+
+      &::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        right: 0;
+        border-radius: 5px;
+        background: $btn-color;
+        position: absolute;
+        top: -8px;
+        transition: $t-time;
+      }
+
+      &:before {
+        content: '';
+        width: 25px;
+        height: 3px;
+        right: 0;
+        border-radius: 5px;
+        background: $btn-color;
+        position: absolute;
+        bottom: -8px;
+        transition: $t-time;
+      }
+    }
+  }
+}

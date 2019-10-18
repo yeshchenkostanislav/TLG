@@ -1,0 +1,146 @@
+.contact {
+  padding: 100px 0 190px 0;
+
+  &__title {
+    color: $section-title;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url(img/leaf-green.png)no-repeat center;
+      width: 57px;
+      height: 31px;
+      top: -20px;
+      left: -31px;
+      position: absolute;
+      z-index: 15;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__content {
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    color: $item-title;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.55px;
+
+    &:not(:first-child) {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  &__link {
+    color: $item-title;
+    position: relative;
+
+    &_phone {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(../img/cube.png) no-repeat center/cover;
+        width: 30px;
+        height: 30px;
+        right: -18px;
+        top: -13px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__icon {
+    margin: 0 30px 0 0;
+    fill: $section-title;
+  }
+
+  &__location-svg {
+    width: 27px;
+    height: 31px;
+  }
+
+  &__phone-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__envelope-svg {
+    width: 32px;
+    height: 26px;
+  }
+
+  &__form {
+    margin: 80px 0 0 0;
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 33px;
+      left: -34px;
+      bottom: -39px;
+      border-left: 12px solid rgba(231, 213, 187, 0.5);
+      border-top: 12px solid rgba(231, 213, 187, 0.5);
+      z-index: -1;
+      transform: rotate(270deg);
+    }
+  }
+
+  &__form-title {
+    color: $section-title;
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 33px;
+      right: -34px;
+      top: -39px;
+      border-left: 12px solid rgba(231, 213, 187, 0.5);
+      border-top: 12px solid rgba(231, 213, 187, 0.5);
+      z-index: -1;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__input {
+    width: 350px;
+    height: 40px;
+    margin: 40px 0 0 0;
+    display: block;
+    border: none;
+    ;
+    border-bottom: 1px solid #5f383c;
+
+    &::placeholder {
+      color: #5f383c;
+      font-size: 18px;
+      letter-spacing: 0.45px;
+    }
+  }
+
+  &__btn {
+    margin: 40px auto 0 auto;
+    box-shadow: inset 0 -3px 5px rgba(211, 255, 160, 0.25);
+  }
+}
