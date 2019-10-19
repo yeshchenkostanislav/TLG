@@ -217,6 +217,18 @@
     display: block;
     border: none;
     border-bottom: 1px solid #5f383c;
+    resize: none;
+    padding: 5px;
+
+
+    &_textarea {
+      height: 90px;
+      //border: 1px solid #5f383c;
+    }
+
+    &_empty {
+      border-bottom: 2px solid red;
+    }
 
     @media(max-width: 576px) {
       width: 280px;
@@ -237,6 +249,8 @@
   &__btn {
     margin: 40px auto 0 auto;
     box-shadow: inset 0 -3px 5px rgba(211, 255, 160, 0.25);
+    justify-content: space-between;
+    padding: 0 25px;
   }
 
   &__map {
