@@ -30,6 +30,7 @@ a {
 button {
   font-family: $base-font;
   outline: none;
+  transition: $t-time;
 
   &:hover {
     cursor: pointer;
@@ -50,7 +51,8 @@ input {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 1140px;
+  width: 1170px;
+  padding: 0 15px;
 
   @media (max-width: 1199px) {
     width: 970px;
@@ -61,8 +63,10 @@ input {
   }
 
   @media (max-width: 768px) {
-    width: 95%
+    width: 100%;
+    padding: 0 20px;
   }
+
 }
 
 .btn {
@@ -78,6 +82,14 @@ input {
   border: none;
   color: #ffffff;
   font-size: 15px;
+
+  &:hover {
+    background-image: linear-gradient(to top, rgba(129, 180, 70, 0.4) 0%, rgba(125, 240, 68, 0.6) 70%);
+
+    .icon-arrow {
+      transform: translateX(2px);
+    }
+  }
 }
 
 @import "icons";
