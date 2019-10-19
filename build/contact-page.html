@@ -50,8 +50,8 @@
                                     <use xlink:href="img/elements.svg#envelope"></use>
                                 </svg><a class="contact__link" href="mail:tischlerei.lambrecht@gmail.com" title="title">tischlerei.lambrecht@gmail.com</a></div>
                         </div>
-                        <form class="contact__form">
-                            <div class="contact__form-title">KONTAKTIEREN SIE UNS</div><input class="contact__input" type="text" placeholder="Enter your name here.."><input class="contact__input" type="text" placeholder="Enter your e-mail here.."><textarea class="contact__input contact__input_textarea" name="" cols="30" rows="70" placeholder="Enter your nachricht here.."></textarea><button class="btn contact__btn">Send<svg class="icon-arrow ">
+                        <form class="contact__form" action="send.php" method="GET" id="form">
+                            <div class="contact__form-title">KONTAKTIEREN SIE UNS</div><input class="contact__input" type="text" placeholder="Enter your name here.." required><input class="contact__input" type="text" placeholder="Enter your e-mail here.." required><textarea class="contact__input contact__input_textarea" name="" cols="30" rows="70" placeholder="Enter your nachricht here.." required></textarea><button class="btn contact__btn" type="button">Send<svg class="icon-arrow ">
                                     <use xlink:href="img/elements.svg#arrow"></use>
                                 </svg></button>
                         </form>

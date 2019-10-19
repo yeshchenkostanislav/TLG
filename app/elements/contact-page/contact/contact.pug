@@ -13,12 +13,12 @@
           ._list-item
             +svg('envelope', 'contact__icon contact__envelope-svg')
             a(href="mail:tischlerei.lambrecht@gmail.com", title="title")._link tischlerei.lambrecht@gmail.com
-        form._form
+        form(action="send.php" method="GET" id="form")._form
           ._form-title KONTAKTIEREN SIE UNS
-          input(type="text" placeholder="Enter your name here..")._input
-          input(type="text" placeholder="Enter your e-mail here..")._input
-          textarea(name="", cols="30", rows="70" placeholder="Enter your nachricht here..")._input.-textarea
-          button().btn._btn Send
+          input(type="text" placeholder="Enter your name here.." required)._input
+          input(type="text" placeholder="Enter your e-mail here.." required)._input
+          textarea(name="", cols="30", rows="70" placeholder="Enter your nachricht here.." required)._input.-textarea
+          button(type="button").btn._btn Send
             +svg('arrow')
       ._map
         img(src="img/map.png", alt="alt")
